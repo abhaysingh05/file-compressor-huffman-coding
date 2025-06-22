@@ -1,0 +1,2 @@
+C:\MinGW\bin\ar.exe qc libhuffman.a CMakeFiles/huffman.dir/src/Huffman.cpp.obj CMakeFiles/huffman.dir/src/BitWriter.cpp.obj CMakeFiles/huffman.dir/src/BitReader.cpp.obj
+C:\MinGW\bin\ranlib.exe libhuffman.a
