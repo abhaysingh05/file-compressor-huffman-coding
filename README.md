@@ -34,6 +34,17 @@ mingw32-make
 ```bash
 ctest
 ```
+## Compression Results
+
+The following image demonstrates the effectiveness and accuracy of the Huffman-based compressor:
+
+![Compression Proof](assets/compression-proof.png)
+
+- **Original size:** 3.24 MB (`input.txt`)
+- **Compressed size:** 1.71 MB (`compressed.huff`)
+- **Decompressed output:** 3.24 MB (`output.txt`) — bit-exact to input
+
+The tool achieves a **47% size reduction** with full round-trip fidelity.
 
 # License
 
