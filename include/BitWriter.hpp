@@ -17,4 +17,4 @@ private:
     int count;
 };
 
-#endif // BIT_WRITER_HPP
+#endif

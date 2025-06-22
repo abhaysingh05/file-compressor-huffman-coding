@@ -33,4 +33,4 @@ void encodeData(std::istream& in, class BitWriter& writer,
 void decodeData(class BitReader& reader, std::ostream& out,
                 int rootIdx, const std::vector<Node>& nodes);
 
-#endif // HUFFMAN_HPP
+#endif

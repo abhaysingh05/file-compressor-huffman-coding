@@ -4,7 +4,6 @@
 #include <fstream>
 #include <queue>
 
-
 using ArrayFreq = std::array<uint64_t, 256>;
 
 ArrayFreq buildFrequencyMap(const std::string &inFile) {

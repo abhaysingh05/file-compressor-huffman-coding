@@ -1,9 +1,9 @@
 #include "BitReader.hpp"
 
-BitReader::BitReader(std::istream& inStream)
+BitReader::BitReader(std::istream &inStream)
     : in(inStream), buffer(0), count(0) {}
 
-bool BitReader::readBit(bool& bit) {
+bool BitReader::readBit(bool &bit) {
     if (count == 0) {
         char ch;
         if (!in.get(ch)) return false;

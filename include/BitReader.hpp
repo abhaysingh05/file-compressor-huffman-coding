@@ -15,4 +15,4 @@ private:
     int count;
 };
 
-#endif // BIT_READER_HPP
+#endif

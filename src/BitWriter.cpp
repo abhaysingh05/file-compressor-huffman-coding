@@ -1,6 +1,6 @@
 #include "BitWriter.hpp"
 
-BitWriter::BitWriter(std::ostream& outStream)
+BitWriter::BitWriter(std::ostream &outStream)
     : out(outStream), buffer(0), count(0) {}
 
 void BitWriter::writeBit(bool bit) {
@@ -12,7 +12,7 @@ void BitWriter::writeBit(bool bit) {
     }
 }
 
-void BitWriter::writeBits(const std::string& bits) {
+void BitWriter::writeBits(const std::string &bits) {
     for (char c : bits) {
         writeBit(c == '1');
     }

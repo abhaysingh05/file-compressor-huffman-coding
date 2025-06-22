@@ -1,20 +1,21 @@
-#include "Huffman.hpp"
-#include "BitWriter.hpp"
 #include "BitReader.hpp"
-#include <sstream>
+#include "BitWriter.hpp"
+#include "Huffman.hpp"
 #include <cassert>
+#include <sstream>
+
 
 int main() {
     std::string data = "this is a test for huffman encoding";
     // build frequency directly from data
-    std::array<uint64_t,256> freq{};
+    std::array<uint64_t, 256> freq{};
     for (unsigned char c : data) freq[c]++;
 
     std::vector<Node> nodes;
     int root = buildHuffmanTree(freq, nodes);
-    std::unordered_map<unsigned char,std::string> codeMap;
+    std::unordered_map<unsigned char, std::string> codeMap;
     buildCodeMap(root, nodes, "", codeMap);
-    
+
     // encode data from memory
     std::istringstream rawIn(data);
     std::ostringstream compressed;

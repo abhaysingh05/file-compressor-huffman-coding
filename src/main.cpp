@@ -1,10 +1,11 @@
-#include "Huffman.hpp"
-#include "BitWriter.hpp"
 #include "BitReader.hpp"
+#include "BitWriter.hpp"
+#include "Huffman.hpp"
 #include <fstream>
 #include <iostream>
 
-int main(int argc, char* argv[]) {
+
+int main(int argc, char *argv[]) {
     if (argc != 4) {
         std::cerr << "Usage: zipper -c|-d <input> <output>\n";
         return 1;
@@ -17,7 +18,7 @@ int main(int argc, char* argv[]) {
         auto freq = buildFrequencyMap(inFile);
         std::vector<Node> nodes;
         int root = buildHuffmanTree(freq, nodes);
-        std::unordered_map<unsigned char,std::string> codeMap;
+        std::unordered_map<unsigned char, std::string> codeMap;
         buildCodeMap(root, nodes, "", codeMap);
 
         std::ifstream in(inFile, std::ios::binary);
