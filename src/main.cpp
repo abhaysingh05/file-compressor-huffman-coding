@@ -4,10 +4,9 @@
 #include <fstream>
 #include <iostream>
 
-
 int main(int argc, char *argv[]) {
     if (argc != 4) {
-        std::cerr << "Usage: zipper -c|-d <input> <output>\n";
+        std::cerr << "Usage: ./zipper -c|-d <input> <output>\n";
         return 1;
     }
     std::string mode = argv[1];

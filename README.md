@@ -1,4 +1,4 @@
-# File Zipper
+# File Compressor
 
 A C++ implementation of file compression and decompression using static Huffman coding.
 
