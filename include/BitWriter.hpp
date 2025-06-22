@@ -6,7 +6,7 @@
 
 class BitWriter {
 public:
-    explicit BitWriter(std::ostream& out);
+    BitWriter(std::ostream& out);
     void writeBit(bool bit);
     void writeBits(const std::string& bits);
     void flush();

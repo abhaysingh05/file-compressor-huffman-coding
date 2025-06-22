@@ -5,7 +5,7 @@
 
 class BitReader {
 public:
-    explicit BitReader(std::istream& in);
+    BitReader(std::istream& in);
     // returns false when stream ended
     bool readBit(bool& bit);
 
